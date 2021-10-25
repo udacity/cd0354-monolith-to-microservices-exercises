@@ -1,37 +1,19 @@
-# Purpose of This Repo
+# Monolith to Microservices Exercise and Demo Code
 
-This repo is meant to be used to keep things organized during content development and act as the source of truth for all projects and exercises related to this course.
+This repo contains code for all of the exercises in the Monolith to Microservices at Scale
 
-## Folder Structure
+## Lesson 1: Introduction to Microservices
 
-### Lesson Folder
+No exercise or demos code
 
-This repo contains a folder for each `lesson` and one `project` folder.
+## Lesson 2: Microservices Design Principles and Best Practices
 
-Example
-```
-lesson-1-hello
-lesson-2-world
-lesson-3-foo
-lesson-4-bar
-project
-```
+No exercise or demos code
 
-Each `lesson` folder is named using the naming convention of `lesson-#-name-of-lesson`.
+## Lesson 3: Containers Using Docker
 
-Example
-```
-lesson-1-hello
-```
+### Exercise Code
 
-Four lesson folders have been provided as a template; However, you may need to add more or possibly use less than four depending on what is needed.
-
-If you require an additional lesson folder, you can make a copy of the folder and paste it into the root directory.
-
-### Exercises Folder
-
-Each `lesson` folder contains an `exercises` folder. This `exercises` folder should contain all files and instructions necessary for the exercises along with the solution. The solutions for these exercises will be shared with students. See the `README` in the `exercises` folder for information about folder structure.
-
-### Project Folder
-
-The `project` folder should contain all files and instructions necessary for setup. If possible, a set of instructions should be provided for both Udacity workspaces and a way to work locally (for both MacOS and Windows OS). At a minimum, one set of instructions should be provided. A `README` template has been provided in the project folder. This template layout should be used to write your README.
+- [Create a Docker App](lesson-3-containers/exercises/docker-app-exercise/README.md)
+- [Debugging](lesson-3-containers/exercises/debugging-exercise/README.md)
+- [Base Images](lesson-3-containers/exercises/base-images-exercise/README.md)
