@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: simple-node
-        image: YOUR_DOCKER_HUB/simple-node
+        image: royalboe/base-image-node-13
         ports:
         - containerPort: 80
