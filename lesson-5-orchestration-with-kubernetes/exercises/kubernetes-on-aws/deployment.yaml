@@ -19,3 +19,9 @@ spec:
         image: royalboe/base-image-node-13
         ports:
         - containerPort: 80
+      livenessProbe:
+        httpget:
+          path: /health
+          port: 8080
+        initialDelaySeconds: 3
+        periodSeconds: 3
