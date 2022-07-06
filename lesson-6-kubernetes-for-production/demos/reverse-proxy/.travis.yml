@@ -11,14 +11,14 @@ install:
 
 # Scripts to be run such as tests
 before_script:
-  - echo "no tests"
+  - echo "no test"
 
 script:
   - docker --version # print the version for logging
   - docker build -t simple-reverse-proxy .
-  - docker tag simple-reverse-proxy DOCKER_HUB_ACCOUNT/simple-reverse-proxy:latest
+  - docker tag simple-reverse-proxy yusidris/simple-reverse-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push DOCKER_HUB_ACCOUNT/simple-reverse-proxy
+  - docker push yusidris/simple-reverse-proxy
 
