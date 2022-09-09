@@ -21,3 +21,5 @@ script:
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push YOUR_DOCKER_HUB/simple-node
+  
+  # commiting travis file
