@@ -2,7 +2,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function getDate() {
+function getData() {
   return new Date();
 }
 
