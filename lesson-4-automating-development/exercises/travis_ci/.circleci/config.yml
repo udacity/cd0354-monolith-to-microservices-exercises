@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  lint-app:
+    docker:
+      - image: cimg/node:16.17.0
+        
+    steps:
+      - checkout
+  build-docker:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Build docker container 
+          command: |
+            echo "--------- The images is Building ------------"
+            docker build -t sample-node .
+            docker tag sample-node beakalyk/sample-node
+            echo "-------- All images succesfully built----------"
+            docker login -u beakalyk -p $DOCKER_PASSWORD
+            echo " ------- login in to hub--------"
+            echo "-------------- Pushing images to dockerhub-------"
+            docker push beakalyk/sample-node
+            
+
+workflows:
+  default:
+    jobs:
+      - lint-app
+      - build-docker:
+          requires: [lint-app]
